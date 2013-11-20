@@ -7,14 +7,14 @@ app.get('/', function(request, response) {
   response.send("Hello World");
 });
 
-app.get('/', function(request, response) {
+app.get('/', function(request1, response1) {
   var read = fs.readFileSync('index.html','utf8');
-  response.send(read);
+  response1.send(read);
 });
 
-app.get('/', function(request, response) {
+app.get('/', function(request2, response2) {
   var read = fs.readFileSync('index.html');
-  response.send(read.toString());
+  response2.send(read.toString());
 });
 
 var port = process.env.PORT || 5000;
