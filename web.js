@@ -9,6 +9,10 @@ app.get('/', function(request, response) {
 });
 
 app.get('/', function(request, response) {
+  response.send("Hello World");
+});
+
+app.get('/', function(request, response) {
   var read = fs.readFileSync('index.html');
   response.send(read.toString());
 });
